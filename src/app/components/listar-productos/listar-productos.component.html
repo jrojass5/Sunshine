@@ -1,0 +1,33 @@
+<table class="estilo-tabla">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th><input class="inputf" id="filtroNombre" [(ngModel)]="filtroNombre" placeholder="Nombre" /></th>
+      <th><input  class="inputf"id="filtroEspecie" [(ngModel)]="filtroEspecie" placeholder="Especie" /></th>
+      <th><input  class="inputf"id="filtroVariedad" [(ngModel)]="filtroVariedad" placeholder="Variedad" /></th>
+      <th><input  class="inputf"id="filtroGrado" [(ngModel)]="filtroGrado" placeholder="Grado" />
+      </th>
+      <th>Foto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of productosFiltrados">
+      <td>{{ producto.id }}</td>
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.especie }}</td>
+      <td>
+        <div *ngFor="let v of producto.variedades">
+          {{ v.variedad }}
+        </div>
+      </td>
+      <td>
+        <div *ngFor="let g of producto.gradosCalidad">
+          {{ g }}
+        </div>
+      </td>
+      <td>
+        <img *ngIf="producto.imagen" [src]="'http://localhost:3000/uploads/' + producto.imagen" width="60" height="60" alt="imagen">
+      </td>
+    </tr>
+  </tbody>
+</table>

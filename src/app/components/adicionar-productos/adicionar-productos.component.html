@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <form [formGroup]="productoForm" (ngSubmit)="onSubmit()" >
+    <div class="form-container">
+      <div class="left">
+        <h2>Descripción del Producto</h2>
+        <div class="input-group">
+          <input id="id" type="text" formControlName="id" required placeholder="ID"
+            [class.is-invalid]="productoForm.get('id')?.invalid && productoForm.get('id')?.touched"/>
+          <div class="error" *ngIf="productoForm.get('id')?.invalid && productoForm.get('id')?.touched">
+            Campo requerido
+          </div>
+        </div>
+        <div class="input-group"> 
+          <input id="nombre" type="text" formControlName="nombre" required placeholder="Nombre"
+          [class.is-invalid]="productoForm.get('nombre')?.invalid && productoForm.get('nombre')?.touched"/>
+          <div class="error" *ngIf="productoForm.get('nombre')?.invalid && productoForm.get('nombre')?.touched">
+            Campo requerido
+          </div>
+        </div>
+        <div class="input-group">
+          <input id="especie" type="text" formControlName="especie" required placeholder="Especie"
+        [class.is-invalid]="productoForm.get('especie')?.invalid && productoForm.get('especie')?.touched"/>
+        <div class="error" *ngIf="productoForm.get('especie')?.invalid && productoForm.get('especie')?.touched">
+          Campo requerido
+        </div>
+        </div>
+      </div>
+  
+      <div class="right">
+        <div class="preview-box">
+          <ng-container *ngIf="!imagenPreview; else imagenCargada">
+            <span class="preview-text">Foto del producto</span>
+          </ng-container>
+          <ng-template #imagenCargada>
+            <img [src]="imagenPreview" alt="Vista previa" class="preview-img" />
+          </ng-template>
+        </div>
+        <label for="imagen" class="custom-upload">
+          Subir archivo <i class="fa-solid fa-folder"></i>
+         </label>
+        <input id="imagen" type="file" (change)="onFileSelected($event)" accept="image/*" hidden />
+  
+  
+        <div class="error" *ngIf="imagenError">
+          Debes seleccionar una imagen.
+        </div>
+  
+      
+      </div>
+    </div>
+    <div class="add">
+   
+      <div formArrayName="variedades" class="tabla-container">
+        <div class="add-button-container">
+          <button type="button" class="add-button" (click)="agregarVariedad()">Add</button>
+        </div>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Variedad</th>
+              <th>Color</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let variedad of variedades.controls; let i = index" [formGroupName]="i">
+              <td>{{ i + 1 }}</td>
+              <td><input class="none" type="text" formControlName="variedad" /></td>
+              <td><input class="none" type="text" formControlName="color" /></td>
+              <td><a href="#" (click)="eliminarVariedad(i)">Eliminar</a></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+      <div formArrayName="gradosCalidad" class="tabla-container">
+        <div class="add-button-container">
+          <button type="button" class="add-button" (click)="agregarGradoCalidad()">Add</button>
+        </div>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Grado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let grado of gradosCalidad.controls; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td><input class="none" type="text" [formControlName]="i" /></td>
+              <td><a href="#" (click)="eliminarGradoCalidad(i)">Eliminar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      
+    </div>
+   
+    <div class="guardar">
+      <button type="submit" [disabled]="productoForm.invalid || !imagenSeleccionada">Guardar</button>
+    </div>
+  </form>

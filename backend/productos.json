@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "nombre": "Milagro",
+    "especie": "Rosa",
+    "variedades": [
+      {
+        "variedad": "variedad1",
+        "color": "Naranja"
+      }
+    ],
+    "gradosCalidad": [
+      "grado1"
+    ],
+    "imagen": "1743992997008-SBC_WEBSITE_PRODUCT_2019_SN_Rose_Miracle_v01.png"
+  },
+  {
+    "id": "2",
+    "nombre": "Christa",
+    "especie": "Rosa",
+    "variedades": [
+      {
+        "variedad": "variedad 1",
+        "color": "Blanco"
+      }
+    ],
+    "gradosCalidad": [
+      "2"
+    ],
+    "imagen": "1743996602536-SBC_WEBSITE_PRODUCT_2019_rose-christa_COPY.png"
+  },
+  {
+    "id": "3",
+    "nombre": "Alstroemeria Precious White",
+    "especie": "ALSTROMERIA",
+    "variedades": [
+      {
+        "variedad": "Sombrero de alstroemeria ",
+        "color": "Rosa fuerte"
+      },
+      {
+        "variedad": "Alstroemeria Lukka",
+        "color": "Naranja"
+      },
+      {
+        "variedad": "Alstroemeria Lucero ",
+        "color": "Naranja/Amarillo"
+      }
+    ],
+    "gradosCalidad": [
+      "Grado 1",
+      "Grado 2",
+      "Grado 3 "
+    ],
+    "imagen": "1744067004653-Precious.jpg"
+  }
+]

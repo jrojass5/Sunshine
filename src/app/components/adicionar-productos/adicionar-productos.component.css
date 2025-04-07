@@ -1,0 +1,174 @@
+.form-container {
+  display: flex;
+  justify-content: space-between; 
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+}
+.left{
+  width: 60%;
+}
+.input-group{
+  margin-top: 25px;
+}
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.none{
+  border-bottom: #f9f9f9;
+}
+.is-invalid {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 2px solid #ff0000;
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+}
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.preview-box {
+  width: 300px;
+  height: 200px;
+  border: 1px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  position: relative;
+}
+
+.preview-text {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.preview-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom-upload {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 2px solid #d40000;
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+}
+.custom-upload:hover {
+cursor: pointer;
+}
+.add{
+  display: flex;
+  justify-content: space-between;
+}
+
+.guardar{
+  display: flex;
+  justify-content: end;
+}
+
+.tabla-container {
+  margin-bottom: 2rem;
+}
+
+
+.styled-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin-top: 1rem;
+  
+}
+
+.styled-table thead tr {
+  background-color: #74b49b;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #c6fd00;
+  padding: 8px;
+}
+
+.styled-table td a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.add-button-container{
+  display: flex;
+  justify-content: end;
+}
+.add-button {
+  margin-top: 0.5rem;
+  background-color: #008cff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #2196f3;
+}
+
+.custom-upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  
+}
+
+.custom-upload i {
+  color:  #008cff ;
+  font-size: 24px
+}

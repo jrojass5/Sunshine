@@ -1,0 +1,40 @@
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background-image: url('/assets/img/logo.png'); 
+    width: 300px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  border-top: 1px solid #000000;  
+  border-bottom: 1px solid #000000;
+}
+
+.buttons-container button {
+  padding: 10px 20px;
+  color: #9c9a9a ;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.buttons-container button:hover {
+  color: #e44c9c ;
+  background-color: white;
+}
+
+.buttons-container .active {
+  font-weight: bold;
+  background-color: white;
+  color: #e44c9c ;
+}
